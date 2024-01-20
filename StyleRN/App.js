@@ -7,10 +7,10 @@ import { View, Text, StyleSheet } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={[styles.box,styles.lightblueBg]}>
+      <View style={[styles.box,styles.lightblueBg,styles.boxShadow]}>
         <Text>LIGHT BLUE</Text>
       </View>
-      <View style={[styles.box,styles.lightgreenBg]}>
+      <View style={[styles.box,styles.lightgreenBg,styles.boxShadow]}>
         <Text>LIGHT GREEN</Text>
       </View>
     </View>
@@ -19,7 +19,7 @@ export default function App() {
 //styling multiple using array syntax
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "plum", padding: 60 },
-  box: { width: '50%', height: '25%', padding: 10 },
+  box: { width: '50%', height: '25%', padding: 20 },
   lightblueBg: {
     backgroundColor: "lightblue",
   },
