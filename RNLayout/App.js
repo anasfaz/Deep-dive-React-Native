@@ -8,15 +8,15 @@ export default function App() {
     //     <Text>hello</Text>
     //   </View>
     // </View>
-    <View style={styles.container}>
-      <Box style={{ backgroundColor: "#DCFFB7" }}>BOX 1</Box>
-      <Box style={{ backgroundColor: "#FF6868", }}>BOX 2</Box>
-      <Box style={{ backgroundColor: "#FFBB64", }}>BOX 3</Box>
-      {/* <Box style={{ backgroundColor: "#FFEAA7" }}>BOX 4</Box>
-      <Box style={{ backgroundColor: "#DCFFB7" }}>BOX 5</Box>
+   <View style={styles.container}>
+      <Box style={{ backgroundColor: "#DCFFB7" ,alignSelf:"flex-start"}}>BOX 1</Box>
+      <Box style={{ backgroundColor: "#FF6868", alignSelf:"flex-end"}}>BOX 2</Box>
+      <Box style={{ backgroundColor: "#FFBB64", alignSelf:"auto"}}>BOX 3</Box>
+      <Box style={{ backgroundColor: "#FFEAA7", }}>BOX 4</Box>
+      <Box style={{ backgroundColor: "#DCFFB7", alignSelf:"center" }}>BOX 5</Box>
       <Box style={{ backgroundColor: "#3652AD" }}>BOX 6</Box>
       <Box style={{ backgroundColor: "#E9F6FF" }}>BOX 7</Box>
-      <Box style={{backgroundColor:"#030637"}}>BOX 8</Box> */}
+      <Box style={{backgroundColor:"#030637"}}>BOX 8</Box>
 
     </View>
   );
