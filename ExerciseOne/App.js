@@ -1,4 +1,4 @@
-import { StyleSheet, View,SafeAreaView,Platform } from "react-native";
+import { StyleSheet, View,SafeAreaView,Platform,ScrollView } from "react-native";
 import PokemonCard from './components/PokemonCard'
 export default function App() {
 
@@ -10,9 +10,30 @@ export default function App() {
     moves: ['scratch', 'Ember', 'Growl', 'Leer'],
     weaknesses:['water','Rock']
   }
+  const squirtleData = {
+    name: "Squirtle",
+    image: require("./assets/squirtle.png"), // Replace with the actual image path
+    type: "Water",
+    hp: 44,
+    moves: ["Tackle", "Water Gun", "Tail Whip", "Withdraw"],
+    weaknesses: ["Electric", "Grass"],
+  }
+  const bulbasaurData = {
+    name: "Bulbasaur",
+    image: require("./assets/bulbasaur.png"), // Replace with the actual image path
+    type: "Grass",
+    hp: 45,
+    moves: ["Tackle", "Vine Whip", "Growl", "Leech Seed"],
+    weaknesses: ["Fire", "Ice", "Flying", "Psychic"],
+  }
   return (
     <SafeAreaView style={styles.container}>
+      <ScrollView>
       <PokemonCard {...charmanderData} />
+      <PokemonCard {...squirtleData} />
+      <PokemonCard {...bulbasaurData} />
+      </ScrollView>
+      
     </SafeAreaView>
   );
 }
