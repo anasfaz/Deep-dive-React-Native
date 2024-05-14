@@ -26,12 +26,21 @@ export default function App() {
     moves: ["Tackle", "Vine Whip", "Growl", "Leech Seed"],
     weaknesses: ["Fire", "Ice", "Flying", "Psychic"],
   }
+  const pikachuData = {
+    name: "Pikachu",
+    image: require("./assets/pikachu.png"), // Replace with the actual image path
+    type: "Electric",
+    hp: 35,
+    moves: ["Quick Attack", "Thunderbolt", "Tail Whip", "Growl"],
+    weaknesses: ["Ground"],
+  }
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
       <PokemonCard {...charmanderData} />
       <PokemonCard {...squirtleData} />
-      <PokemonCard {...bulbasaurData} />
+        <PokemonCard {...bulbasaurData} />
+        <PokemonCard {...pikachuData} />
       </ScrollView>
       
     </SafeAreaView>
