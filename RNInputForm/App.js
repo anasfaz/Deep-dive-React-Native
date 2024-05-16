@@ -16,13 +16,22 @@ export default function App() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({})
   const validationForm = () => {
-    let errors = {}
-    if (!userName) errors.username = 'Username is required'
-    if (!password) errors.password = 'password is required'
-    
-    return Object.keys(errors).length === 0;
+    let error = {}
+    console.log(userName,password,error,'validation');
+    if (!userName) error.username = 'Username is required'
+    if (!password) error.password = 'password is required'
+    console.log(error,'erro');
+    setErrors(error)
+    return Object.keys(error).length === 0;
+  }
 
-
+  const handleSubmit = () => {
+    if (validationForm()) {
+      console.log("submitted", userName, password);
+      setUserName('')
+      setPassword('')
+      setErrors({})
+    }
   }
   return (
     <KeyboardAvoidingView behavior="padding"
@@ -50,7 +59,7 @@ export default function App() {
           secureTextEntry
         />
         {errors.password ? <Text style={styles.errors}> {errors.password}</Text>:null}
-        <Button title="Login" />
+        <Button title="Login"  onPress={handleSubmit}/>
       </View>
     </KeyboardAvoidingView>
   );
@@ -102,9 +111,8 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   errors: {
-    color: 'yellow',
-    padding: 3,
-    marginBottom:2,
-
+    color: 'red',
+    marginBottom: 2,
+    padding:2,
   }
 });
